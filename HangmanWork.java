@@ -5,17 +5,6 @@
  */
 package hangmanwork;
 
-/**
- *
- * @author mgillman
- */
-
-    
-    /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
 
 /**
@@ -49,6 +38,29 @@ public class HangmanWork {
         //get word, store to current word. iterate through lettersFound list. If no letter match, add " ". If match, add letter at i.       
     }
 
+    // FIXME******** METHOD TO CLEAR CONSOLE AFTER EVERY TURN (THIS ISN'T WORKING) - SUGGESTIONS WELCOME!!
+       /*
+    private final static void clearConsole()
+    {
+        try
+        {
+            final String os = System.getProperty("os.name");
+
+            if (os.contains("Windows"))
+            {
+                Runtime.getRuntime().exec("cls");
+            }
+            else
+            {
+                Runtime.getRuntime().exec("clear");
+            }
+        }
+        catch (final Exception e)
+        {
+            //  Handle any exceptions.
+        }
+    }
+        */
     // Initializes all of our attributes back to their initial state
     private void setupNewGame() {
 
@@ -91,7 +103,7 @@ public class HangmanWork {
             System.out.print("\033[H\033[2J");
             while (gameWon == false) {
                   
-
+                //clearConsole() FIXME --> function does not clear console
                 this.makeTurn(); //loop this
 
                 this.printGameStatus();
